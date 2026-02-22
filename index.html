@@ -14,7 +14,7 @@
       --charcoal:#2F2C28;
       --olive:#6F7A5C;
 
-      --max: 980px;
+      --max: 1040px;
       --radius: 18px;
       --border: 1px solid rgba(47,44,40,0.18);
       --glass: rgba(255,255,255,0.22);
@@ -35,7 +35,7 @@
       margin: 0 auto;
       padding: 52px 20px 70px;
       display: grid;
-      gap: 22px;
+      gap: 18px;
     }
 
     header{
@@ -43,6 +43,7 @@
       gap: 12px;
       text-align:center;
       padding-top: 6px;
+      padding-bottom: 10px;
     }
 
     h1{
@@ -94,30 +95,25 @@
       aspect-ratio: 16 / 9;
       object-fit: cover;
       border-bottom: var(--border);
+      background: rgba(255,255,255,0.16);
+    }
+
+    .img{
+      width:100%;
+      display:block;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: var(--border);
+      background: rgba(255,255,255,0.16);
     }
 
     .grid{
       display:grid;
       gap: 14px;
     }
-
-    @media(min-width: 860px){
-      .grid.two{
-        grid-template-columns: 1fr 1fr;
-      }
-      .grid.three{
-        grid-template-columns: 1.15fr 0.85fr;
-      }
-    }
-
-    .img{
-      width:100%;
-      height:100%;
-      display:block;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: var(--border);
-      background: rgba(255,255,255,0.18);
+    @media(min-width: 900px){
+      .grid.two{ grid-template-columns: 1fr 1fr; }
+      .grid.three{ grid-template-columns: 1fr 1fr 1fr; }
     }
 
     /* Button + hover */
@@ -133,7 +129,6 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:10px;
       padding: 12px 18px;
       border-radius: 999px;
       border: 1px solid rgba(47,44,40,0.26);
@@ -149,20 +144,20 @@
       transform: translateY(-1px);
       background: rgba(47,44,40,0.09);
       border-color: rgba(47,44,40,0.35);
-      text-decoration:none;
-    }
-
-    footer{
-      text-align:center;
-      opacity:0.80;
-      font-size: 13px;
-      margin-top: 6px;
     }
 
     .divider{
       height:1px;
       background: linear-gradient(90deg, rgba(47,44,40,0), rgba(111,122,92,0.55), rgba(47,44,40,0));
       border-radius:999px;
+      margin: 6px 0;
+    }
+
+    footer{
+      text-align:center;
+      opacity:0.80;
+      font-size: 13px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -174,26 +169,22 @@
       <p class="sub">Slow Ritual Wear</p>
     </header>
 
-    <!-- HERO IMAGE (Frame 1) -->
+    <!-- HERO -->
     <section class="card">
       <picture>
-        <img class="hero" src="assets/hero.jpeg" alt="Temple Set 01 — Red Clay Shirt and Sand Pant">
+        <source srcset="assets/hero.webp" type="image/webp">
+        <img class="hero" src="assets/hero.jpg" alt="Temple Set 01 — Red Clay Shirt and Sand Pant">
       </picture>
 
       <div class="content">
         <div class="kicker">Temple Set 01</div>
-        <p class="p">Red Clay Shirt · Sand Pant</p>
-        <p class="p" style="opacity:0.92;">
-          Lightweight 100% cotton. Relaxed structure. Designed for calm presence.
-        </p>
-        <p class="p" style="opacity:0.85;">
-          Small batch production. Made in Thailand. Preorders opening soon.
-        </p>
+        <p class="p">Red Clay Shirt · White Pant</p>
+        <p class="p" style="opacity:0.92;">Lightweight 100% cotton. Relaxed structure. Designed for calm presence.</p>
+        <p class="p" style="opacity:0.85;">Small batch production. Made in Thailand. Preorders opening soon.</p>
 
         <div class="btnrow">
-          <!-- Replace # with your email list link (Formspree / Mailchimp / ConvertKit / Google Form) -->
+          <!-- Replace these with your real links -->
           <a class="btn" href="#" target="_blank" rel="noopener">Join the List →</a>
-          <!-- Replace # with your Instagram -->
           <a class="btn" href="#" target="_blank" rel="noopener">Instagram →</a>
         </div>
       </div>
@@ -201,25 +192,65 @@
 
     <div class="divider" aria-hidden="true"></div>
 
-    <!-- SUPPORTING IMAGES (Frames 2 & 4) -->
+    <!-- LIFESTYLE (movement + calm) -->
     <section class="grid two">
       <picture>
-        <img class="img" src="assets/walking.jpeg" alt="Temple Set movement shot">
+        <source srcset="assets/walking.webp" type="image/webp">
+        <img class="img" src="assets/walking.jpg" alt="Temple Set 01 walking">
       </picture>
 
       <picture>
-        <img class="img" src="assets/sitting.jpeg" alt="Temple Set seated calm shot">
+        <source srcset="assets/sittingwide.webp" type="image/webp">
+        <img class="img" src="assets/sittingwide.jpg" alt="Temple Set 01 seated">
       </picture>
     </section>
 
-    <!-- Optional: Add Frame 3 as a texture/detail shot -->
+    <!-- RITUAL FEATURE (record player mid crop) -->
+    <section class="card">
+      <picture>
+        <source srcset="assets/sidecut.webp" type="image/webp">
+        <img class="hero" src="assets/sidecut.jpg" alt="Temple Set 01 ritual moment">
+      </picture>
+      <div class="content">
+        <div class="kicker">Ritual</div>
+        <p class="p" style="opacity:0.92;">Understated essentials for calm presence.</p>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- DETAILS (buttons + wrist + pants) -->
     <section class="card">
       <div class="content">
         <div class="kicker">Details</div>
-        <p class="p" style="opacity:0.92;">Natural texture. Quiet structure. No logos.</p>
+        <p class="p" style="opacity:0.92;">Natural cotton. Three wooden buttons. No excess.</p>
       </div>
+
+      <div class="wrap" style="padding: 0 18px 18px; gap:14px;">
+        <section class="grid three">
+          <picture>
+            <source srcset="assets/buttons.webp" type="image/webp">
+            <img class="img" src="assets/buttons.jpg" alt="Wooden buttons detail">
+          </picture>
+
+          <picture>
+            <source srcset="assets/wrist.webp" type="image/webp">
+            <img class="img" src="assets/wrist.jpg" alt="Wrist and sleeve detail">
+          </picture>
+
+          <picture>
+            <source srcset="assets/pantsclose.webp" type="image/webp">
+            <img class="img" src="assets/pantsclose.jpg" alt="Pant fabric texture detail">
+          </picture>
+        </section>
+      </div>
+    </section>
+
+    <!-- OPTIONAL FINAL MOOD (record player close-up) -->
+    <section class="card">
       <picture>
-        <img class="hero" src="assets/closeup.jpeg" alt="Fabric texture detail">
+        <source srcset="assets/sittingclose.webp" type="image/webp">
+        <img class="hero" src="assets/sittingclose.jpg" alt="Temple Set 01 close detail">
       </picture>
     </section>
 
