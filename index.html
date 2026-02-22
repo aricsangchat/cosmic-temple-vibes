@@ -9,81 +9,227 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Inter, sans-serif;
-      background: #E7DED3;
-      color: #2F2C28;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 40px 20px;
+    :root{
+      --sand:#E7DED3;
+      --charcoal:#2F2C28;
+      --olive:#6F7A5C;
+
+      --max: 980px;
+      --radius: 18px;
+      --border: 1px solid rgba(47,44,40,0.18);
+      --glass: rgba(255,255,255,0.22);
     }
 
-    .container {
-      max-width: 700px;
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--sand);
+      color: var(--charcoal);
+      line-height: 1.55;
+      letter-spacing: 0.01em;
     }
 
-    h1 {
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      font-size: 42px;
-      margin: 0 0 20px 0;
-      text-transform: uppercase;
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 52px 20px 70px;
+      display: grid;
+      gap: 22px;
     }
 
-    h2 {
-      font-weight: 400;
-      letter-spacing: 0.08em;
+    header{
+      display:grid;
+      gap: 12px;
+      text-align:center;
+      padding-top: 6px;
+    }
+
+    h1{
+      margin:0;
+      font-weight:500;
+      letter-spacing:0.15em;
+      text-transform:uppercase;
+      font-size: clamp(34px, 4.2vw, 56px);
+    }
+
+    .sub{
+      margin:0;
+      font-size: 15px;
+      letter-spacing:0.10em;
+      text-transform:uppercase;
+      opacity:0.92;
+    }
+
+    .card{
+      border: var(--border);
+      background: var(--glass);
+      border-radius: var(--radius);
+      overflow:hidden;
+    }
+
+    .content{
+      padding: 18px 18px;
+      display:grid;
+      gap: 10px;
+      text-align:center;
+    }
+
+    .kicker{
+      text-transform:uppercase;
+      letter-spacing:0.18em;
+      font-size: 12px;
+      opacity:0.85;
+    }
+
+    .p{
+      margin:0;
       font-size: 16px;
-      margin: 0 0 40px 0;
-      text-transform: uppercase;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 24px;
+    /* Images */
+    .hero{
+      display:block;
+      width:100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-bottom: var(--border);
     }
 
-    .button {
-      display: inline-block;
-      padding: 12px 24px;
-      border: 1px solid #2F2C28;
-      border-radius: 30px;
-      text-decoration: none;
-      color: #2F2C28;
+    .grid{
+      display:grid;
+      gap: 14px;
+    }
+
+    @media(min-width: 860px){
+      .grid.two{
+        grid-template-columns: 1fr 1fr;
+      }
+      .grid.three{
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: var(--border);
+      background: rgba(255,255,255,0.18);
+    }
+
+    /* Button + hover */
+    .btnrow{
+      display:flex;
+      justify-content:center;
+      gap: 10px;
+      flex-wrap:wrap;
+      padding-top: 4px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(47,44,40,0.26);
+      background: rgba(47,44,40,0.06);
+      color: var(--charcoal);
+      text-decoration:none;
       font-size: 14px;
-      letter-spacing: 0.05em;
-      transition: all 0.2s ease;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(47,44,40,0.09);
+      border-color: rgba(47,44,40,0.35);
+      text-decoration:none;
     }
 
-    .button:hover {
-      background: #2F2C28;
-      color: #E7DED3;
+    footer{
+      text-align:center;
+      opacity:0.80;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .divider{
+      height:1px;
+      background: linear-gradient(90deg, rgba(47,44,40,0), rgba(111,122,92,0.55), rgba(47,44,40,0));
+      border-radius:999px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>COSMIC TEMPLE</h1>
-    <h2>Slow Ritual Wear</h2>
+  <div class="wrap">
+    <header>
+      <h1>COSMIC TEMPLE</h1>
+      <p class="sub">Slow Ritual Wear</p>
+    </header>
 
-    <p>
-      Temple Set 01 — Red Clay Shirt & Sand Pant.
-      Lightweight 100% cotton. Relaxed structure.
-      Designed for calm presence.
-    </p>
+    <!-- HERO IMAGE (Frame 1) -->
+    <section class="card">
+      <picture>
+        <img class="hero" src="assets/hero.jpeg" alt="Temple Set 01 — Red Clay Shirt and Sand Pant">
+      </picture>
 
-    <p>
-      Small batch production. Made in Thailand.
-      Preorders opening soon.
-    </p>
+      <div class="content">
+        <div class="kicker">Temple Set 01</div>
+        <p class="p">Red Clay Shirt · Sand Pant</p>
+        <p class="p" style="opacity:0.92;">
+          Lightweight 100% cotton. Relaxed structure. Designed for calm presence.
+        </p>
+        <p class="p" style="opacity:0.85;">
+          Small batch production. Made in Thailand. Preorders opening soon.
+        </p>
 
-    <a href="#" class="button">Join the List</a>
+        <div class="btnrow">
+          <!-- Replace # with your email list link (Formspree / Mailchimp / ConvertKit / Google Form) -->
+          <a class="btn" href="#" target="_blank" rel="noopener">Join the List →</a>
+          <!-- Replace # with your Instagram -->
+          <a class="btn" href="#" target="_blank" rel="noopener">Instagram →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- SUPPORTING IMAGES (Frames 2 & 4) -->
+    <section class="grid two">
+      <picture>
+        <img class="img" src="assets/walking.jpeg" alt="Temple Set movement shot">
+      </picture>
+
+      <picture>
+        <img class="img" src="assets/seated.jpeg" alt="Temple Set seated calm shot">
+      </picture>
+    </section>
+
+    <!-- Optional: Add Frame 3 as a texture/detail shot -->
+    <section class="card">
+      <div class="content">
+        <div class="kicker">Details</div>
+        <p class="p" style="opacity:0.92;">Natural texture. Quiet structure. No logos.</p>
+      </div>
+      <picture>
+        <img class="hero" src="assets/closeup.jpeg" alt="Fabric texture detail">
+      </picture>
+    </section>
+
+    <footer>
+      © <span id="y"></span> COSMIC TEMPLE
+    </footer>
   </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
