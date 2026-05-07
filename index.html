@@ -413,6 +413,56 @@
         flex: 1 1 auto;
       }
     }
+
+    /* Sticky Mobile CTA */
+    .mobile-cta{
+      position:fixed;
+      left:12px;
+      right:12px;
+      bottom:12px;
+      z-index:999;
+      display:none;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      padding:10px;
+      border-radius:20px;
+      border:1px solid rgba(47,44,40,0.18);
+      background:rgba(255,250,243,0.82);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 10px 35px rgba(47,44,40,0.12);
+    }
+
+    .mobile-cta a{
+      min-height:48px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:14px;
+      text-decoration:none;
+      font-size:11px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:var(--charcoal);
+      border:1px solid rgba(47,44,40,0.16);
+      background:rgba(255,255,255,0.48);
+      font-weight:600;
+    }
+
+    .mobile-cta a.primary{
+      background:var(--charcoal);
+      color:#fffaf3;
+      border-color:var(--charcoal);
+    }
+
+    @media(max-width: 720px){
+      .mobile-cta{
+        display:grid;
+      }
+
+      body{
+        padding-bottom:92px;
+      }
+    }
   </style>
 </head>
 
@@ -528,6 +578,21 @@
       </section>
     </section>
 
+    <!-- REVIEWS -->
+    <section class="card">
+      <div class="section center">
+        <div class="kicker">What Customers Say</div>
+
+        <p class="quote">
+          “I tried almost every shop in Phuket and still couldn’t find the quality I was looking for.”
+        </p>
+
+        <p class="p muted" style="max-width:760px;">
+          The next day, the customer came back and told us the recommendation was the best he found — and that Cosmic Temple felt warm, like family, like home.
+        </p>
+      </div>
+    </section>
+
     <!-- DELIVERY / LOCATION -->
     <section id="delivery" class="card location-card">
       <div class="section center">
@@ -559,6 +624,22 @@
       </div>
       <p>© <span id="y"></span> Cosmic Temple · Rawai, Phuket</p>
     </footer>
+  </div>
+
+  <div class="mobile-cta">
+    <a class="primary" href="contact.html">Chat Us</a>
+
+    <a href="https://maps.app.goo.gl/FmCnNczaio4KqMPv6"
+      target="_blank"
+      rel="noopener">
+      Maps
+    </a>
+
+    <a href="https://www.instagram.com/vibes.of.cosmic.temple/"
+      target="_blank"
+      rel="noopener">
+      Instagram
+    </a>
   </div>
 
   <script>
