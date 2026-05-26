@@ -1,4 +1,6 @@
+import AtmosphereSection from "@/components/AtmosphereSection";
 import Footer from "@/components/Footer";
+import GuidanceSection from "@/components/GuidanceSection";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import MobileDock from "@/components/MobileDock";
@@ -12,6 +14,10 @@ export default function Home() {
       <Header />
 
       <Hero />
+
+      <AtmosphereSection />
+
+      <GuidanceSection />
 
       <TrustSection />
 
