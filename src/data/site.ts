@@ -1,30 +1,40 @@
 export const siteConfig = {
-  name: "Cosmic Temple Vibes",
+  name: "Cosmic Temple",
   url: "https://cosmictemplevibes.com",
   tagline: "Come home to quality.",
   description:
-    "A warm local shop experience in Rawai, Phuket, built around trust, calm guidance, and a welcoming atmosphere.",
+    "A warm local experience in Rawai, Phuket, built around trust, calm guidance, and a welcoming atmosphere.",
   location: "Rawai, Phuket",
-  address: "Rawai, Phuket, Thailand",
-  phone: "+66 XX XXX XXXX",
+  address: "30, 63 Soi Saiyuan, Rawai, Amphoe Mueang Phuket, Phuket 83130, Thailand",
+  hours: "Open daily: 14:00 to 22:00",
+  phone: "+66 63 884 9316",
   primaryAction: {
     label: "Visit the Shop",
-    href: "#visit",
+    href: "https://maps.app.goo.gl/FmCnNczaio4KqMPv6",
   },
   secondaryAction: {
     label: "Message Us",
-    href: "#contact",
+    href: "contact.html",
   },
   links: {
-    instagram: "https://www.instagram.com/cosmictemplevibes/",
-    googleMaps: "https://maps.google.com/?q=Cosmic%20Temple%20Vibes%20Rawai%20Phuket",
-    reviews: "https://www.google.com/search?q=Cosmic+Temple+Vibes+Rawai+Phuket+reviews",
+    instagram: "https://www.instagram.com/vibes.of.cosmic.temple/",
+    facebook: "https://www.facebook.com/vibesofcosmictemple",
+    googleMaps: "https://maps.app.goo.gl/FmCnNczaio4KqMPv6",
+    whatsapp: "https://wa.me/66638849316",
+    telegram: "https://t.me/cosmic_temple_vibes",
+    reviews: "https://www.google.com/search?q=Cosmic+Temple+Rawai+Phuket+reviews",
+  },
+  images: {
+    hero: "/assets/cosmic-temple-dispensary-rawai-phuket.jpg",
+    heroWebp: "/assets/cosmic-temple-dispensary-rawai-phuket.webp",
+    recommend: "/assets/recommend.jpg",
+    atmosphere: "/assets/recordplayerwide.jpg",
   },
 };
 
 export const navItems = [
-  { label: "Experience", href: "#experience" },
-  { label: "Trust", href: "#trust" },
+  { label: "Quality", href: "#quality" },
+  { label: "Guidance", href: "#guidance" },
   { label: "Reviews", href: "#reviews" },
-  { label: "Visit", href: "#visit" },
+  { label: "Location", href: "#location" },
 ];
