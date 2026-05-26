@@ -25,10 +25,10 @@ export const siteConfig = {
     reviews: "https://www.google.com/search?q=Cosmic+Temple+Rawai+Phuket+reviews",
   },
   images: {
-    hero: "/assets/cosmic-temple-dispensary-rawai-phuket.jpg",
-    heroWebp: "/assets/cosmic-temple-dispensary-rawai-phuket.webp",
-    recommend: "/assets/recommend.jpg",
-    atmosphere: "/assets/recordplayerwide.jpg",
+    hero: "/images/cosmic-temple-dispensary-rawai-phuket.jpg",
+    heroWebp: "/images/cosmic-temple-dispensary-rawai-phuket.webp",
+    recommend: "/images/recommend.jpg",
+    atmosphere: "/images/recordplayerwide.jpg",
   },
 };
 
