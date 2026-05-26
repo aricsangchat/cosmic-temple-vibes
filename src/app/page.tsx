@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import MobileDock from "@/components/MobileDock";
 import ReviewsSection from "@/components/ReviewsSection";
 import TrustSection from "@/components/TrustSection";
+import WhyPeopleComeBack from "@/components/WhyPeopleComeBack";
 import Section from "@/components/ui/Section";
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
       <Hero />
 
       <AtmosphereSection />
+
+      <WhyPeopleComeBack />
 
       <GuidanceSection />
 
