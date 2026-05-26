@@ -1,8 +1,10 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import MobileDock from "@/components/MobileDock";
 import ReviewsSection from "@/components/ReviewsSection";
 import TrustSection from "@/components/TrustSection";
+import Section from "@/components/ui/Section";
 
 export default function Home() {
   return (
@@ -15,10 +17,7 @@ export default function Home() {
 
       <ReviewsSection />
 
-      <section
-        id="location"
-        className="border-t border-white/10 px-6 py-24 sm:px-10 lg:px-16"
-      >
+      <Section id="location" className="py-24">
         <div className="mx-auto max-w-4xl space-y-6 text-center">
           <div className="text-sm uppercase tracking-[0.2em] text-zinc-500">
             Rawai · Phuket
@@ -32,9 +31,11 @@ export default function Home() {
             The new Next.js foundation preserves the original emotional positioning while preparing the site for long-term SEO, journal content, local pages, and scalable architecture.
           </p>
         </div>
-      </section>
+      </Section>
 
       <Footer />
+
+      <MobileDock />
     </main>
   );
 }
