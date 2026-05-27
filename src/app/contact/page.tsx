@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/site";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[#0d0c0b] text-white">
       <Header />
 
       <Section className="border-none pt-28">

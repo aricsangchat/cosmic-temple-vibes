@@ -23,23 +23,25 @@ const trustItems = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 py-16 sm:px-10 lg:px-16 lg:py-24">
+    <section className="relative overflow-hidden bg-[#0d0c0b] px-6 py-16 sm:px-10 lg:px-16 lg:py-24">
       <div className="absolute inset-0">
         <Image
           src={siteConfig.images.hero}
           alt="Cosmic Temple in Rawai Phuket"
           fill
           priority
+          loading="eager"
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/5" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/35" />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b]/80 via-[#0d0c0b]/40 to-[#0d0c0b]/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0c0b] via-transparent to-[#0d0c0b]/35" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
         <div className="max-w-3xl space-y-8 py-16 sm:py-20 lg:py-28">
-          <div className="inline-flex items-center rounded-full border border-white/15 bg-black/25 px-4 py-2 text-sm text-zinc-100 shadow-lg backdrop-blur-md">
+          <div className="inline-flex items-center rounded-full border border-white/15 bg-[#0d0c0b]/25 px-4 py-2 text-sm text-zinc-100 shadow-lg backdrop-blur-md">
             Rawai, Phuket • Warm Local Experience
           </div>
 
@@ -49,7 +51,7 @@ export default function Hero() {
             </h1>
 
             <p className="max-w-2xl text-lg leading-8 text-zinc-100 drop-shadow-lg sm:text-xl">
-              Quality, honest guidance, and a warm shop experience in Rawai, Phuket.
+              Quality cannabis, honest guidance, and a warm shop experience in Rawai, Phuket.
             </p>
           </div>
 
@@ -64,7 +66,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="grid gap-0 overflow-hidden rounded-3xl border border-white/15 bg-black/35 shadow-2xl backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-0 overflow-hidden rounded-3xl border border-white/15 bg-[#0d0c0b]/35 shadow-2xl backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4">
           {trustItems.map((item, index) => (
             <div
               key={item.title}

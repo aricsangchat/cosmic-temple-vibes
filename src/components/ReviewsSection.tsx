@@ -1,35 +1,34 @@
+import Section from "@/components/ui/Section";
+
 const reviews = [
   {
     quote:
-      "Warm atmosphere, friendly people, and a place that feels welcoming from the moment you walk in.",
-    author: "Google Review",
+      "A very cozy and atmospheric place. They have the best cannabis I’ve ever smoked in my life... The staff are very kind and always ready to help. I definitely recommend visiting this place if you’re in Phuket.",
+    author: "Customer story",
   },
   {
     quote:
-      "One of the most comfortable and calm shop experiences we found while visiting Phuket.",
-    author: "Local Visitor",
+      "Really best place, i love there from first look! I will recommend for everyone this place!",
+    author: "Returning customer",
   },
   {
     quote:
-      "The atmosphere and staff energy made the experience memorable and approachable.",
-    author: "Returning Customer",
+      "Cosmic Temple Vibes is an absolute gem in the Phuket cannabis world. With a warm and inviting atmosphere that makes you feel right at home.",
+    author: "Visitor feedback",
   },
 ];
 
 export default function ReviewsSection() {
   return (
-    <section
-      id="reviews"
-      className="border-t border-white/10 px-6 py-20 sm:px-10 lg:px-16"
-    >
-      <div className="mx-auto max-w-6xl space-y-12">
+    <Section id="reviews" className="bg-[#11100f]">
+      <div className="space-y-12">
         <div className="space-y-4">
           <div className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-            Community Feedback
+            What Customers Say
           </div>
 
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Real experiences from visitors and locals.
+            Quality, guidance, and a feeling people remember.
           </h2>
         </div>
 
@@ -37,7 +36,7 @@ export default function ReviewsSection() {
           {reviews.map((review) => (
             <div
               key={review.quote}
-              className="rounded-3xl border border-white/10 bg-zinc-900/50 p-8"
+              className="rounded-3xl border border-white/10 bg-white/[0.03] p-8"
             >
               <p className="text-lg leading-8 text-zinc-200">
                 “{review.quote}”
@@ -50,6 +49,6 @@ export default function ReviewsSection() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

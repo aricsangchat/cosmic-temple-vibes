@@ -5,21 +5,25 @@ import { motion } from "framer-motion";
 type FadeInProps = {
   children: React.ReactNode;
   delay?: number;
+  duration?: number;
+  y?: number;
   className?: string;
 };
 
 export default function FadeIn({
   children,
   delay = 0,
+  duration = 0.9,
+  y = 24,
   className = "",
 }: FadeInProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: false, margin: "-100px" }}
       transition={{
-        duration: 0.9,
+        duration,
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}

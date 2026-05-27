@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Cosmic Temple",
   url: "https://cosmictemplevibes.com",
-  tagline: "Come home to quality.",
+  tagline: "Come Home to Quality.",
   description:
-    "A warm local experience in Rawai, Phuket, built around trust, calm guidance, and a welcoming atmosphere.",
+  "A warm licensed cannabis dispensary in Rawai, Phuket offering quality cannabis, honest guidance, local delivery, and a calm welcoming atmosphere.",
   location: "Rawai, Phuket",
   address: "30, 63 Soi Saiyuan, Rawai, Amphoe Mueang Phuket, Phuket 83130, Thailand",
   hours: "Open daily: 14:00 to 22:00",
@@ -29,6 +29,7 @@ export const siteConfig = {
     heroWebp: "/images/cosmic-temple-dispensary-rawai-phuket.webp",
     recommend: "/images/recommend.jpg",
     atmosphere: "/images/recordplayerwide.jpg",
+    entrance: "/images/patiovibes.jpg"
   },
 };
 

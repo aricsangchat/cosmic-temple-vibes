@@ -2,25 +2,25 @@ import Section from "@/components/ui/Section";
 
 const reasons = [
   {
-    title: "Warm Atmosphere",
+    title: "They Feel Comfortable",
     description:
-      "A slower, calmer environment designed to feel welcoming rather than overwhelming.",
+      "A slower, warmer environment where visitors can ask questions without feeling rushed or overwhelmed.",
   },
   {
-    title: "Thoughtful Guidance",
+    title: "They Trust the Guidance",
     description:
-      "A more personal and approachable experience centered around clarity and comfort.",
+      "Recommendations are given with care, clarity, and attention to what each person is actually looking for.",
   },
   {
-    title: "Local Experience",
+    title: "They Remember the Feeling",
     description:
-      "A space shaped around Rawai, Phuket and the people who return for the atmosphere.",
+      "Quality matters, but the atmosphere, people, and local Rawai energy are what make the experience stay with them.",
   },
 ];
 
 export default function WhyPeopleComeBack() {
   return (
-    <Section>
+    <Section id="quality" className="bg-[#0d0c0b]">
       <div className="space-y-12">
         <div className="max-w-3xl space-y-5">
           <div className="text-sm uppercase tracking-[0.2em] text-zinc-500">
@@ -28,11 +28,13 @@ export default function WhyPeopleComeBack() {
           </div>
 
           <h2 className="text-4xl font-semibold tracking-tight text-white">
-            A calmer experience built around trust and atmosphere.
+            Quality brings people in. The feeling brings them back.
           </h2>
 
           <p className="text-lg leading-8 text-zinc-300">
-            The strongest part of the experience is not complexity — it is feeling comfortable, welcomed, and guided clearly.
+            Cosmic Temple is built around more than a transaction — it is a calm,
+            welcoming cannabis experience in Rawai, Phuket where people feel
+            comfortable choosing with confidence.
           </p>
         </div>
 
@@ -40,7 +42,7 @@ export default function WhyPeopleComeBack() {
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="rounded-3xl border border-white/10 bg-zinc-950/70 p-8"
+              className="rounded-3xl border border-white/10 bg-white/[0.03] p-8"
             >
               <div className="space-y-4">
                 <h3 className="text-2xl font-medium text-white">

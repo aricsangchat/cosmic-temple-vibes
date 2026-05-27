@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 px-6 py-4 backdrop-blur-xl sm:px-10 lg:px-16">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0d0c0b]/70 px-6 py-4 backdrop-blur-xl sm:px-10 lg:px-16">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6">
         <a href="/" className="leading-tight" aria-label="Cosmic Temple homepage">
           <div className="text-base font-semibold tracking-tight text-white">
