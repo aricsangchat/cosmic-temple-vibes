@@ -8,6 +8,8 @@ import ReviewsSection from "@/components/ReviewsSection";
 import TrustSection from "@/components/TrustSection";
 import WhyPeopleComeBack from "@/components/WhyPeopleComeBack";
 import Section from "@/components/ui/Section";
+import AtmosphereGallery from "@/components/AtmosphereGallery";
+import SlowPhuketSection from "@/components/SlowPhuketSection";
 
 export default function Home() {
   return (
@@ -17,6 +19,10 @@ export default function Home() {
       <Hero />
 
       <AtmosphereSection />
+
+      <AtmosphereGallery />
+    `
+      <SlowPhuketSection />`
 
       <WhyPeopleComeBack />
 
