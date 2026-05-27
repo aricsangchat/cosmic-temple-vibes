@@ -1,3 +1,6 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import MobileDock from "@/components/MobileDock";
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
 import { siteConfig } from "@/data/site";
@@ -5,6 +8,8 @@ import { siteConfig } from "@/data/site";
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-black text-white">
+      <Header />
+
       <Section className="border-none pt-28">
         <div className="max-w-4xl space-y-8">
           <div className="space-y-4">
@@ -70,7 +75,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/10 overflow-hidden bg-zinc-950/60">
+          <div className="overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/60">
             <iframe
               src="https://www.google.com/maps?q=Cosmic+Temple+Rawai+Phuket&output=embed"
               width="100%"
@@ -83,6 +88,10 @@ export default function ContactPage() {
           </div>
         </div>
       </Section>
+
+      <Footer />
+
+      <MobileDock />
     </main>
   );
 }
