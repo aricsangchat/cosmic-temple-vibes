@@ -14,7 +14,7 @@ export const siteConfig = {
   },
   secondaryAction: {
     label: "Message Us",
-    href: "contact.html",
+    href: "/contact",
   },
   links: {
     instagram: "https://www.instagram.com/vibes.of.cosmic.temple/",
@@ -33,8 +33,8 @@ export const siteConfig = {
 };
 
 export const navItems = [
-  { label: "Quality", href: "#quality" },
-  { label: "Guidance", href: "#guidance" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Location", href: "#location" },
+  { label: "Quality", href: "/#quality" },
+  { label: "Guidance", href: "/#guidance" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Location", href: "/contact" },
 ];
